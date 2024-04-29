@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "6772ce44-c028-450b-a172-69ce5144353e",
+		"name": "Logicea Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1548639",
+		"_collection_link": "https://voucher.postman.co/workspace/Logicea~f0e492f4-89e8-4f41-97fb-397b22530ce1/collection/1548639-6772ce44-c028-450b-a172-69ce5144353e?action=share&source=collection_link&creator=1548639"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"smjoshua09@gmail.com\",\r\n    \"password\": \"qwerty\",\r\n    \"fullName\": \"Simon Mwaura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtam9zaHVhMDlAZ21haWwuY29tIn0.EsKD7gcWU--0n1BPh6llwkO9HIyNenuImMco0mLL5ls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mwauraj09@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtam9zaHVhMDlAZ21haWwuY29tIn0.EsKD7gcWU--0n1BPh6llwkO9HIyNenuImMco0mLL5ls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"smjoshua09@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestRoles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzbWpvc2h1YTA5QGdtYWlsLmNvbSIsImlhdCI6MTcxMzc1NjM2OCwiZXhwIjoxNzEzNzU5OTY4fQ.IjGutNwqKea6JupIcBnfAUkh2xWgBW9Z55-I8tSB_AA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/v1/ping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cards",
+			"item": [
+				{
+					"name": "ShowUserCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzEzODA2ODA4LCJleHAiOjE3MTM4MTA0MDh9.MfgEv2v9zyKpVTFLrwJNj01SN1wullAWguwwUprrFYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUserCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzEzODA2ODA4LCJleHAiOjE3MTM4MTA0MDh9.MfgEv2v9zyKpVTFLrwJNj01SN1wullAWguwwUprrFYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"statusId\": 1,\r\n    \"name\": \"card4\",\r\n    \"description\": \"description4\",\r\n    \"color\": \"#FFFFFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzbWpvc2h1YTA5QGdtYWlsLmNvbSIsImlhdCI6MTcxNDM4Mzg1MSwiZXhwIjoxNzE0Mzg3NDUxfQ.1gi5tRvP7uQI7atUf23cqseIEzvpoBm9ce5or8q1eqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUserCards",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserCard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzEzODAzMTc3LCJleHAiOjE3MTM4MDY3Nzd9.PjODFf6NUie_oQ5hEmX4wpFDay3022BVv_K7uy332DI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/card/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"card",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserCard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzE0MzEyMTQxLCJleHAiOjE3MTQzMTU3NDF9.Uy9f9UBni8bJvFWy799jTnAsoN9wDd7pgx37GbuX9gA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"statusId\": 1,\r\n    \"name\": \"card4\",\r\n    \"description\": \"description4\",\r\n    \"color\": \"#EEEEEE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/card/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"card",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUserCards(Search By Status)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzE0Mzc2MzUxLCJleHAiOjE3MTQzNzk5NTF9.3FJyjdii2VO3lP10N0_MXD0IToQIty-PeBUF6NWFoMs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"pageNo\":0,\r\n\t\"pageSize\":4,\r\n\t\"sortBy\":\"name\",\r\n\t\"direction\":\"ASC\",\r\n\t\"startDate\":null,\r\n\t\"endDate\":null,\r\n\t\"searchText\":\"To Do\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/pages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"pages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUserCards(Search By Color)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzE0Mzc2MzUxLCJleHAiOjE3MTQzNzk5NTF9.3FJyjdii2VO3lP10N0_MXD0IToQIty-PeBUF6NWFoMs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"pageNo\":0,\r\n\t\"pageSize\":4,\r\n\t\"sortBy\":\"name\",\r\n\t\"direction\":\"ASC\",\r\n\t\"startDate\":null,\r\n\t\"endDate\":null,\r\n\t\"searchText\":\"#EEEEEE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/pages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"pages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUserCards(Search By Card Name)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtd2F1cmFqMDlAZ21haWwuY29tIiwiaWF0IjoxNzE0Mzc2MzUxLCJleHAiOjE3MTQzNzk5NTF9.3FJyjdii2VO3lP10N0_MXD0IToQIty-PeBUF6NWFoMs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"pageNo\":0,\r\n\t\"pageSize\":4,\r\n\t\"sortBy\":\"name\",\r\n\t\"direction\":\"ASC\",\r\n\t\"startDate\":null,\r\n\t\"endDate\":null,\r\n\t\"searchText\":\"card3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/v1/user/1/pages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1",
+								"pages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
